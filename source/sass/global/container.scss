@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: size(1200px);
+  margin: 0 auto;
+  padding: 0 size(14px);
+
+  @include _768 {
+    padding: 0 10px;
+  }
+}
