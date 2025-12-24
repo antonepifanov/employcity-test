@@ -1,2 +1,85 @@
 .footer {
+  background-color: $color-dimgray;
+  color: $color-default-white;
+  padding: size(30px) 0;
+  font-size: size(13px);
+
+  @include vp-768 {
+
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: space-between;
+    gap: size(40px);
+
+    @include vp-768 {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+
+  &__copyright {
+    @include vp-768 {
+      font-size: 10px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: size(38px);
+    padding-left: size(40px);
+    border-left: size(1px) solid $color-silver;
+
+    @include vp-768 {
+      justify-content: space-around;
+      gap: 15px;
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: size(10px);
+    transition: color $trans-default;
+
+    @include vp-768 {
+      font-size: 12px;
+      gap: 5px;
+    }
+
+    &[href] {
+      @include hover-focus {
+        color: $color-cyanblue;
+
+        svg {
+          color: $color-default-white;
+        }
+      }
+    }
+
+    svg {
+      width: size(20px);
+      height: size(20px);
+      color: $color-cyanblue;
+      flex-shrink: 0;
+      transition: color $trans-default;
+
+      @include vp-768 {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 }
