@@ -1,9 +1,10 @@
+import {initBurger} from './modules/init-burger';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
   iosVhFix();
-
+  initBurger();
   // Modules
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

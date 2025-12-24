@@ -1,24 +1,14 @@
 .wrapper {
   position: relative;
   max-width: 100%;
-  display: grid;
-  grid-template-columns: size(306px) 1fr;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
-  @include _768 {
+  @include vp-768 {
     display: flex;
     flex-direction: column;
-  }
-
-  .header {
-    grid-row: 1 / -1;
-  }
-
-  .footer {
-    grid-row: 3 / 4;
   }
 
   .header,

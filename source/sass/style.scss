@@ -11,9 +11,12 @@
 @import "global/utils";
 @import "global/container";
 
+// Elements
+@import "elements/burger";
+@import "elements/title";
+@import "elements/button";
+
 // Blocks
-@import "blocks/title";
-@import "blocks/btn";
 @import "blocks/header";
 @import "blocks/intro";
 @import "blocks/footer";

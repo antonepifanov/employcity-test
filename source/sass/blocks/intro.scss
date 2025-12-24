@@ -1,2 +1,82 @@
 .intro {
+  padding: size(202px) 0;
+  background-image: url("./../../img/intro.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+
+  @include vp-768 {
+    padding: 100px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: size(80px);
+    max-width: size(780px);
+
+    @include vp-768 {
+      gap: 50px;
+    }
+  }
+
+  &__title {
+    span {
+      color: $color-aqua;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: size(10px);
+
+    p {
+      font-weight: 700;
+
+      @include vp-768 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: size(5px);
+    padding-left: size(10px);
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: size(10px);
+
+      @include vp-768 {
+        font-size: 16px;
+      }
+
+      &::before {
+        content: "\2D";
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(30px);
+
+    @include vp-768 {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    font-size: size(13px);
+    min-height: size(43px);
+    min-width: size(183px);
+  }
 }

@@ -1,0 +1,34 @@
+.button {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: size(10px);
+  text-transform: uppercase;
+  border-radius: size(4px);
+  cursor: pointer;
+  transition: color $trans-default, border $trans-default, background-color $trans-default;
+
+  &--blue {
+    background-color: $color-aqua;
+    color: $color-default-white;
+    border: size(1px) solid $color-default-white;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: $color-dark-slategray;
+      border: size(1px) solid $color-slategray;
+    }
+  }
+
+  &--white {
+    background-color: $color-default-white;
+    color: $color-dark-slategray;
+    border: size(1px) solid $color-slategray;
+
+    @include hover-focus {
+      background-color: $color-aqua;
+      color: $color-default-white;
+      border: size(1px) solid $color-default-white;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.burger {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-default-white;
+    transition: transform $trans-default;
+  }
+
+  &::after {
+    top: 11px;
+  }
+
+  &::before {
+    bottom: 11px;
+  }
+}
+
+.burger.is-open {
+  &::after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    bottom: unset;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
