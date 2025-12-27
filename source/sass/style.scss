@@ -1,4 +1,5 @@
 // Vendor
+@import "vendor/nouislider";
 
 // Global
 @import "global/variables";
@@ -15,10 +16,15 @@
 @import "elements/burger";
 @import "elements/title";
 @import "elements/button";
+@import "elements/custom-select";
+@import "elements/custom-input";
+@import "elements/form";
+@import "elements/input-upload";
 
 // Blocks
 @import "blocks/header";
 @import "blocks/intro";
+@import "blocks/order";
 @import "blocks/footer";
 
 // ---------------------------------

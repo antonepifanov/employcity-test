@@ -1,0 +1,58 @@
+.custom-input {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  input {
+    flex-grow: 1;
+    min-height: size(48px);
+    padding: size(12px) size(10px);
+    background-color: rgba($color-default-white, 0.85);
+    border: size(1px) solid $color-default-white;
+    border-radius: size(3px);
+    color: $color-jaguar;
+    font-size: size(18px);
+    outline: none;
+    cursor: pointer;
+    transition:  border-radius $trans-default, border $trans-default, background-color $trans-default, color $trans-default;
+
+    &::placeholder {
+      color: $color-jaguar;
+    }
+
+    @include hover-focus {
+      border: size(1px) solid rgba($color-default-black, 0.5);
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: size(-10px);
+    transform: translateY(-100%);
+    font-size: size(18px);
+    left: 0;
+    color: $color-red;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &.is-invalid {
+    input {
+      border: size(1px) solid $color-red;
+
+      @include hover-focus {
+        border: size(1px) solid $color-red;
+      }
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    top: size(-10px);
+    transform: translateY(-100%);
+    font-size: size(18px);
+    left: 0;
+    color: $color-red;
+    transition: opacity $trans-default;
+  }
+}

@@ -28,7 +28,7 @@
                   <a class="header__link" href="#" data-close-menu>Цены</a>
                 </li>
                 <li class="header__link-wrapper">
-                  <a class="header__link" href="#" data-close-menu>Оформить заказ</a>
+                  <a class="header__link" href="#order" data-close-menu>Оформить заказ</a>
                 </li>
               </ul>
             </nav>
@@ -54,6 +54,74 @@
               <div class="intro__buttons">
                 <button class="intro__button button button--blue" type="button">Заказать</button>
                 <button class="intro__button button button--white" type="button">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="order" id="order">
+          <div class="container">
+            <div class="order__wrapper">
+              <div class="order__text">
+                <h2 class="order__title title title--h2">Оформление <span>заказа</span></h2>
+                <p>Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+              </div>
+              <ul class="order__schema">
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/search.svg')">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit amet</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/percent.svg')">Сonsecteturadipiscing elit</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/file.svg')">Sed do&nbsp;eiusmod tempor</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/message.svg')">Esse&nbsp;cillum&nbsp;dolore&nbsp;eu fugiat</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/money.svg')">Excepteur sint occaecat cupidatat non proident</li>
+              </ul>
+              <div class="order__form form" data-form-validate data-callback="base">
+                <form method="post" novalidate>
+                  <div class="form__fields">
+                    <div class="form__field form__select custom-select" data-select data-validate-type="select" data-name="system" data-required>
+                      <span class="custom-select__error">Поле обязательно к заполнению</span>
+                      <span class="custom-select__placeholder">Выберите тип системы</span>
+                      <button class="custom-select__button" type="button">
+                        <span class="custom-select__text"></span>
+                        <span class="custom-select__icon">
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use href="img/sprite.svg#arrow-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="custom-select__list">
+                        <ul class="custom-select__items" role="listbox">
+                          <li class="custom-select__item" tabindex="0" data-select-value="Sed">Sed ut perspiciatis</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Nemo">Nemo enim ipsam</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Et">Et harum quidem</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Temporibus">Temporibus autem</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Itaque">Itaque earum rerum</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form__field form__input custom-input" data-validate-type="email" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <label class="visually-hidden" for="email">Введите ваш e-mail</label>
+                      <input id="email" type="email" name="email" placeholder="Ваш e-mail"/>
+                    </div>
+                    <div class="form__field form__input custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                      <label class="visually-hidden" for="name">Введите ваше имя</label>
+                      <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                    </div>
+                  </div>
+                  <div class="form__data">
+                    <div class="form__range">
+                      <div class="form__range-field">
+                        <label class="form__label" for="range">Sed ut&nbsp;perspiciatis, unde omnis iste natus</label>
+                        <input id="range" type="text" name="range" readonly>
+                      </div>
+                      <div class="range"></div>
+                    </div>
+                    <div class="input-upload" data-upload="file">
+                      <label>
+                        <input type="file" name="upload-file"/><span class="btn">Загрузить файл</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button class="form__button button button--blue" type="submit">Отправить</button>
+                </form>
               </div>
             </div>
           </div>

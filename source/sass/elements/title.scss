@@ -12,12 +12,11 @@
   }
 
   &--h2 {
-    font-size: size(16px);
-    line-height: size(24px);
-    font-weight: 400;
-    letter-spacing: size(-0.2px);
-    text-transform: uppercase;
-    padding: size(16px) size(32px);
-    margin-bottom: size(24px);
+    font-size: size(36px);
+    font-weight: 800;
+
+    @include vp-768 {
+      font-size: 22px;
+    }
   }
 }
