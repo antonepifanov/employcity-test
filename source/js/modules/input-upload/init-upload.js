@@ -28,7 +28,6 @@ export const uploadImage = () => new Upload(uploadImageBlock, {
   errorMessage: 'Выделенные файлы превышают максимальный размер',
 });
 
-
 export const uploadFile = () => new Upload(uploadIFileBlock, {
   uploadLength: 1,
   preview: true,
@@ -38,7 +37,7 @@ export const uploadFile = () => new Upload(uploadIFileBlock, {
     fileSize: true,
   },
   emptyMessage: 'Добавление файла обязательно',
-  errorMessage: 'Общий размер файлов слишком большой',
+  errorMessage: 'Размер файла слишком большой',
 });
 
 export const uploadImageDrop = () => new Upload(uploadImageDropBlock, {

@@ -4,10 +4,6 @@
   padding: size(30px) 0;
   font-size: size(13px);
 
-  @include vp-768 {
-
-  }
-
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, auto);

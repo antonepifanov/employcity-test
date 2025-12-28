@@ -2,6 +2,8 @@ import noUiSlider from 'nouislider';
 
 export const initRange = () => {
   const range = document.querySelector('.range');
+  const form = document.querySelector('form');
+
   if (!range) {
     return;
   }
@@ -12,7 +14,6 @@ export const initRange = () => {
     noUiSlider.create(range, {
       start: 75,
       step: 1,
-      connect: [true, false],
       format: {
         to: (value) => {
           if (Number.isInteger(value)) {
@@ -25,7 +26,7 @@ export const initRange = () => {
         },
       },
       range: {
-        min: [1],
+        min: [0],
         max: [100],
       },
       orientation: 'horizontal',
@@ -34,9 +35,13 @@ export const initRange = () => {
 
     range.noUiSlider.on('update',
         (values, handle) => (
-          rangeInput.value = parseInt(values[handle], 10) + '%'
+          rangeInput.value = parseInt(values[handle], 10) + ' %'
         )
     );
+
+    form.addEventListener('submit', () => {
+      setTimeout(() => range.noUiSlider.set(75, true), 350);
+    });
   };
 
   init();

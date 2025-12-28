@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: size(120px) 0 size(150px);
+  flex-grow: 1;
 
   @include vp-768 {
     padding: 70px 0;

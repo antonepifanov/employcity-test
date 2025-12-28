@@ -1,0 +1,102 @@
+.form {
+  .form__fields {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - size(60px)) / 3));
+    gap: size(30px);
+    margin-bottom: size(30px);
+
+    @include vp-768 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: size(30px);
+    margin-bottom: size(55px);
+
+    @include vp-768 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__range {
+    display: flex;
+    flex-direction: column;
+    gap: size(20px);
+
+    @include vp-768 {
+      width: 100%;
+    }
+  }
+
+  &__range-field {
+    display: flex;
+    justify-content: space-between;
+    gap: size(15px);
+    font-size: size(18px);
+
+    input[name="range"] {
+      background-color: $color-transparent;
+      padding: 0;
+      width: fit-content;
+      max-width: size(100px);
+      color: $color-default-white;
+      font-size: size(18px);
+      line-height: inherit;
+      border: none;
+      text-align: right;
+      pointer-events: none;
+    }
+  }
+
+  &__button {
+    font-size: size(15px);
+    min-height: size(48px);
+    min-width: size(370px);
+    margin: 0 auto;
+
+    @include vp-768 {
+      min-width: unset;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__file {
+    width: size(370px);
+
+    @include vp-768 {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__file-button {
+    border: size(2px) solid $color-cyanblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: size(10px);
+    font-size: size(15px);
+    font-weight: 600;
+    min-height: size(48px);
+
+    svg {
+      width: size(17px);
+      height: size(20px);
+    }
+  }
+
+  &__response {
+    display: none;
+    align-items: center;
+    text-align: center;
+    margin-top: size(30px);
+  }
+}

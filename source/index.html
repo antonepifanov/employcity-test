@@ -52,8 +52,8 @@
                 </ul>
               </div>
               <div class="intro__buttons">
-                <button class="intro__button button button--blue" type="button">Заказать</button>
-                <button class="intro__button button button--white" type="button">Подробнее</button>
+                <a class="intro__button button button--blue" href="#form">Заказать</a>
+                <a class="intro__button button button--white" href="#">Подробнее</a>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@
                 <li class="order__schema-item" style="--schema-icon: url('/img/svg/money.svg')">Excepteur sint occaecat cupidatat non proident</li>
               </ul>
               <div class="order__form form" data-form-validate data-callback="base">
-                <form method="post" novalidate>
+                <form id="form" method="post" enctype="multipart/form-data" novalidate>
                   <div class="form__fields">
                     <div class="form__field form__select custom-select" data-select data-validate-type="select" data-name="system" data-required>
                       <span class="custom-select__error">Поле обязательно к заполнению</span>
@@ -108,19 +108,25 @@
                   <div class="form__data">
                     <div class="form__range">
                       <div class="form__range-field">
-                        <label class="form__label" for="range">Sed ut&nbsp;perspiciatis, unde omnis iste natus</label>
-                        <input id="range" type="text" name="range" readonly>
+                        <label for="range">Sed ut&nbsp;perspiciatis, unde omnis iste natus</label>
+                        <input id="range" type="text" name="range" tabindex="-1" readonly>
                       </div>
                       <div class="range"></div>
                     </div>
-                    <div class="input-upload" data-upload="file">
+                    <div class="form__file input-upload" data-upload="file">
                       <label>
-                        <input type="file" name="upload-file"/><span class="btn">Загрузить файл</span>
+                        <input type="file" name="upload-file"/>
+                        <span class="form__file-button button button--white">
+                          <svg width="17" height="20" aria-hidden="true">
+                            <use href="img/sprite.svg#file-icon"></use>
+                          </svg>
+                          Прикрепить файл
+                        </span>
                       </label>
                     </div>
                   </div>
-
                   <button class="form__button button button--blue" type="submit">Отправить</button>
+                  <div class="form__response"></div>
                 </form>
               </div>
             </div>
