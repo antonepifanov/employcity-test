@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" tabs="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" tabs="Тестовое задание">
+    <title>Employcity-test</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <a class="header__logo-link">
+              <img src="/img/logo.svg" width="247" height="35" alt="Логотип">
+            </a>
+            <nav class="header__nav no-scrollbar" data-header-nav>
+              <ul class="header__links">
+                <li class="header__link-wrapper">
+                  <a class="header__link" href="#" data-close-menu>Бизнес</a>
+                </li>
+                <li class="header__link-wrapper">
+                  <a class="header__link" href="#" data-close-menu>О&nbsp;нас</a>
+                </li>
+                <li class="header__link-wrapper">
+                  <a class="header__link" href="#" data-close-menu>Цены</a>
+                </li>
+                <li class="header__link-wrapper">
+                  <a class="header__link" href="#order" data-close-menu>Оформить заказ</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="header__burger burger" type="button" data-burger>
+              <span class="visually-hidden">Кнопка открытия/закрытия мобильного меню</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="intro">
+          <div class="container">
+            <div class="intro__wrapper">
+              <h1 class="intro__title title title--h1"><span>Lorem ipsum</span> dolor sit ametconsectetur <span>adipiscing</span></h1>
+              <div class="intro__text">
+                <p>At&nbsp;vero eos et&nbsp;accusamus et&nbsp;iusto odio dignissimos ducimus!</p>
+                <ul class="intro__features">
+                  <li>Totam rem aperiam eaque ipsa</li>
+                  <li>Sit voluptatem accusantium doloremque laudantium</li>
+                  <li>Sed ut&nbsp;perspiciatis, unde omnis iste natus error</li>
+                </ul>
+              </div>
+              <div class="intro__buttons">
+                <a class="intro__button button button--blue" href="#form">Заказать</a>
+                <a class="intro__button button button--white" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="order" id="order">
+          <div class="container">
+            <div class="order__wrapper">
+              <div class="order__text">
+                <h2 class="order__title title title--h2">Оформление <span>заказа</span></h2>
+                <p>Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+              </div>
+              <ul class="order__schema">
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/search.svg')">Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit amet</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/percent.svg')">Сonsecteturadipiscing elit</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/file.svg')">Sed do&nbsp;eiusmod tempor</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/message.svg')">Esse&nbsp;cillum&nbsp;dolore&nbsp;eu fugiat</li>
+                <li class="order__schema-item" style="--schema-icon: url('/img/svg/money.svg')">Excepteur sint occaecat cupidatat non proident</li>
+              </ul>
+              <div class="order__form form" data-form-validate data-callback="base">
+                <form id="form" method="post" enctype="multipart/form-data" novalidate>
+                  <div class="form__fields">
+                    <div class="form__field form__select custom-select" data-select data-validate-type="select" data-name="system" data-required>
+                      <span class="custom-select__error">Поле обязательно к заполнению</span>
+                      <span class="custom-select__placeholder">Выберите тип системы</span>
+                      <button class="custom-select__button" type="button">
+                        <span class="custom-select__text"></span>
+                        <span class="custom-select__icon">
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use href="img/sprite.svg#arrow-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="custom-select__list">
+                        <ul class="custom-select__items" role="listbox">
+                          <li class="custom-select__item" tabindex="0" data-select-value="Sed">Sed ut perspiciatis</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Nemo">Nemo enim ipsam</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Et">Et harum quidem</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Temporibus">Temporibus autem</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="Itaque">Itaque earum rerum</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form__field form__input custom-input" data-validate-type="email" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <label class="visually-hidden" for="email">Введите ваш e-mail</label>
+                      <input id="email" type="email" name="email" placeholder="Ваш e-mail"/>
+                    </div>
+                    <div class="form__field form__input custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                      <label class="visually-hidden" for="name">Введите ваше имя</label>
+                      <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                    </div>
+                  </div>
+                  <div class="form__data">
+                    <div class="form__range">
+                      <div class="form__range-field">
+                        <label for="range">Sed ut&nbsp;perspiciatis, unde omnis iste natus</label>
+                        <input id="range" type="text" name="range" tabindex="-1" readonly>
+                      </div>
+                      <div class="range"></div>
+                    </div>
+                    <div class="form__file input-upload" data-upload="file">
+                      <label>
+                        <input type="file" name="upload-file"/>
+                        <span class="form__file-button button button--white">
+                          <svg width="17" height="20" aria-hidden="true">
+                            <use href="img/sprite.svg#file-icon"></use>
+                          </svg>
+                          Прикрепить файл
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="form__button button button--blue" type="submit">Отправить</button>
+                  <div class="form__response"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <p class="footer__copyright">&copy;&nbsp;2018 &laquo;LoremIpsum.net&raquo; Все права защищены.</p>
+            <ul class="footer__items">
+              <li class="footer__item">
+                <div class="footer__item-wrapper">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#qiwi-icon"></use>
+                  </svg>
+                  Qiwi wallet
+                </div>
+              </li>
+              <li class="footer__item">
+                <div class="footer__item-wrapper">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#yandex-icon"></use>
+                  </svg>
+                  Yandex Money
+                </div>
+              </li>
+              <li class="footer__item">
+                <div class="footer__item-wrapper">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#web-icon"></use>
+                  </svg>
+                  Web Money
+                </div>
+              </li>
+            </ul>
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a class="footer__item-wrapper" href="mailto:info@ipsum228.com">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#mail-icon"></use>
+                  </svg>
+                  info@ipsum228.com
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-wrapper" href="https://vk.com" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use href="img/sprite.svg#vk-icon"></use>
+                  </svg>
+                  Мы&nbsp;вконтакте
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
