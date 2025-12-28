@@ -1625,7 +1625,7 @@ button {
 
 .intro {
   padding: 10.1rem 0;
-  background-image: url("./../../img/intro.webp");
+  background-image: url("../img/intro.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
@@ -1706,7 +1706,7 @@ button {
 
 .order {
   background-color: #272733;
-  background-image: url("/img/order-bg.webp");
+  background-image: url("../img/order-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 6rem 0 7.5rem;
@@ -1795,7 +1795,7 @@ button {
   height: 0.3rem;
   right: -4rem;
   top: 2.35rem;
-  background-image: url("/img/svg/points.svg");
+  background-image: url("../img/svg/points.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
