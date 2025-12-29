@@ -1,6 +1,6 @@
 .order {
   background-color: $color-jaguar;
-  background-image: url("/img/order-bg.webp");
+  background-image: url("../img/order-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding: size(120px) 0 size(150px);
@@ -87,7 +87,7 @@
         height: size(6px);
         right: size(-80px);
         top: size(47px);
-        background-image: url("/img/svg/points.svg");
+        background-image: url("../img/svg/points.svg");
         background-repeat: no-repeat;
         background-size: contain;
 
